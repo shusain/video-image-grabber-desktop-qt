@@ -60,6 +60,7 @@ class MainWindow(QMainWindow):
 
       # Create and set up the video playback area
       self.video_widget = QVideoWidget()
+      self.video_widget.setMinimumSize(640, 480)
       main_layout.addWidget(self.video_widget)
       self.media_player.setVideoOutput(self.video_widget)
       self.media_player.durationChanged.connect(self.update_slider_range)
@@ -113,6 +114,8 @@ class MainWindow(QMainWindow):
         if file_name:
             self.media_player.setMedia(QMediaContent(QUrl.fromLocalFile(file_name)))
             self.play_button.setEnabled(True)
+        self.media_player.play()
+        self.media_player.pause()
 
     def play_pause(self):
         if self.media_player.state() == QMediaPlayer.PlayingState:
