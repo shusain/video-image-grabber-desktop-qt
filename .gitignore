@@ -1,0 +1,5 @@
+venv
+colmap_sparse
+colmap_text
+output
+colmap.db
