@@ -7,10 +7,8 @@ This application allows users to load a video, control playback (frame-by-frame,
 ## Requirements
 
 - Python 3.7 or later
-- PyQt5
-- PyQt5-sip
-- ffmpeg
-- ffpyplayer
+- Native video codecs installed so the QT Media Player can decode/playback the video and extract frames: https://www.codecguide.com/download_kl.htm (the basic package is likely enough, pay attention during install to avoid extra software)
+- PyQt5 (installed from requirements.txt below)
 
 ## Installation
 
